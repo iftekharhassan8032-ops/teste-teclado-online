@@ -1,0 +1,1776 @@
+# TesteTecladoOnline.com
+
+## Final Product Requirements Document
+
+**Version:** 1.0
+**Product:** TesteTecladoOnline.com
+**Primary Market:** Brazil 🇧🇷
+**Primary Language:** Brazilian Portuguese (`pt-BR`)
+**Development Language:** English first, then localized to Brazilian Portuguese
+**Product Type:** Free browser-based keyboard testing and diagnostic platform
+**Architecture:** Multi-page website with a shared keyboard-testing engine
+
+---
+
+# 1. Executive Summary
+
+TesteTecladoOnline.com will be a free, fast and highly user-friendly online keyboard testing platform targeted primarily at Brazilian users.
+
+The platform will go beyond a basic virtual keyboard by providing:
+
+* Complete keyboard testing
+* Windows keyboard testing
+* Mac keyboard testing
+* Brazilian ABNT2 testing
+* Ghosting testing
+* NKRO/rollover testing
+* Key chatter detection
+* Browser-observed response timing
+* Typing-speed testing
+* Guided full-keyboard testing
+* Diagnostic results
+* Dark mode
+* Optional key sounds
+* Keyboard layout selection
+* Exportable test results
+* Mobile-responsive interface
+* Privacy-first local processing
+
+The product will use a **multi-page SEO architecture**, while all keyboard-related functionality will be powered by a reusable shared TypeScript/React engine.
+
+The primary objective is to build a technically excellent tool first, then use real Brazilian search data to expand the website into a broader keyboard-testing ecosystem.
+
+---
+
+# 2. Product Vision
+
+## Vision
+
+Become a comprehensive and trusted online keyboard diagnostic platform for Brazilian users.
+
+The website should allow a user to answer:
+
+> "Is my keyboard working correctly?"
+
+within seconds.
+
+The product should feel like a lightweight diagnostic application rather than a generic SEO webpage.
+
+---
+
+# 3. Primary Goals
+
+### Product goals
+
+1. Provide an extremely fast keyboard-testing experience.
+2. Support Windows, Mac and ABNT2 keyboards.
+3. Detect individual key presses and releases.
+4. Provide useful keyboard diagnostics.
+5. Make advanced testing understandable to non-technical users.
+6. Require no account or installation.
+7. Process keyboard data locally whenever possible.
+8. Provide excellent accessibility and mobile responsiveness.
+
+### SEO goals
+
+1. Target Brazilian keyboard-related search intent.
+2. Build individual pages around distinct search intents.
+3. Create useful topical coverage without keyword stuffing.
+4. Establish strong internal linking.
+5. Build a scalable SEO architecture.
+6. Use Search Console data to determine future content and tool expansion.
+
+---
+
+# 4. Target Audience
+
+## Primary
+
+Brazilian users searching for:
+
+* teste teclado
+* teste teclado online
+* teste de teclado
+* testar teclado
+* teste teclado grátis
+* teste teclado ABNT2
+* teste teclado notebook
+* teste teclado PC
+* teste teclado gamer
+* teste teclado mecânico
+* teste teclado Mac
+* teste teclado Windows
+* teste ghosting teclado
+* teste NKRO
+* teste velocidade digitação
+
+## Secondary
+
+* Gamers
+* Mechanical keyboard users
+* Laptop users
+* PC builders
+* IT technicians
+* Students
+* Computer repair technicians
+* People buying/selling used keyboards
+* Mac users
+* Windows users
+
+---
+
+# 5. Core Product Principles
+
+## 5.1 No account required
+
+The core tools must work without:
+
+* Registration
+* Login
+* Email
+* Phone number
+
+## 5.2 No installation
+
+The primary experience must work directly inside a modern browser.
+
+## 5.3 Privacy-first
+
+Keyboard events should be processed locally whenever technically possible.
+
+The website must clearly communicate:
+
+> "As teclas pressionadas durante o teste não são enviadas para nossos servidores."
+
+The application must never intentionally collect passwords or personal typed content.
+
+## 5.4 Tool first
+
+The interactive tool should appear before large blocks of SEO content.
+
+## 5.5 Fast
+
+Target:
+
+* Excellent Core Web Vitals
+* Low JavaScript overhead
+* Optimized images
+* Minimal third-party scripts
+* Fast initial rendering
+* Lazy loading where appropriate
+
+## 5.6 Accessible
+
+The interface must be usable by keyboard and screen-reader users wherever technically possible.
+
+---
+
+# 6. Main User Journey
+
+```text
+Google Search
+      ↓
+Relevant Landing Page
+      ↓
+Interactive Tool
+      ↓
+Select OS/Layout
+      ↓
+Press Keys
+      ↓
+Live Detection
+      ↓
+Optional Advanced Test
+      ↓
+Diagnostic Result
+      ↓
+Related Tools
+      ↓
+Additional Helpful Content
+```
+
+No registration wall.
+
+---
+
+# 7. Website Architecture
+
+The website will be **multi-page**.
+
+The keyboard engine will be shared between pages.
+
+```text
+                  TesteTecladoOnline.com
+                           │
+          ┌────────────────┴─────────────────┐
+          │                                  │
+         TOOLS                            CONTENT
+          │                                  │
+   ┌──────┼─────────┐                ┌───────┼────────┐
+   │      │         │                │       │        │
+Keyboard Ghosting Typing           Guides   FAQ   Troubleshooting
+   │      │         │
+   │      │         ├── Speed
+   │      │         └── Accuracy
+   │      ├── NKRO
+   │      └── Rollover
+   │
+   ├── Windows
+   ├── Mac
+   ├── ABNT2
+   ├── Notebook
+   └── Gamer
+```
+
+---
+
+# 8. Initial URL Architecture
+
+## Main
+
+```text
+/
+```
+
+Primary intent:
+
+**teste teclado online**
+
+## Core tool pages
+
+```text
+/teste-teclado
+/teste-teclado-windows
+/teste-teclado-mac
+/teste-teclado-abnt2
+/teste-ghosting-teclado
+/teste-nkro
+/teste-velocidade-digitacao
+/teste-chatter
+```
+
+## Potential future pages
+
+```text
+/teste-teclado-notebook
+/teste-teclado-pc
+/teste-teclado-gamer
+/teste-teclado-mecanico
+/teste-teclado-bluetooth
+/teste-teclado-sem-fio
+/teste-teclado-60
+```
+
+These pages should only be created when research indicates meaningful search intent or user value.
+
+---
+
+# 9. Homepage
+
+## Primary H1
+
+Production:
+
+**Teste de Teclado Online**
+
+Development:
+
+**Online Keyboard Tester**
+
+## Hero
+
+### Portuguese
+
+**Teste seu teclado online**
+
+Supporting text:
+
+> Verifique todas as teclas, encontre possíveis problemas e teste ghosting e rollover diretamente no navegador.
+
+Primary CTA:
+
+**Começar teste**
+
+The keyboard tester should be immediately visible or reachable with minimal interaction.
+
+---
+
+# 10. Main Keyboard Tester
+
+The main tool is the core product.
+
+## Supported operating systems
+
+* Windows
+* Mac
+
+The system may automatically detect the likely operating system, but users must always be able to switch manually.
+
+---
+
+# 11. Keyboard Layouts
+
+Required layouts:
+
+### 🇧🇷 ABNT2
+
+Brazilian keyboard layout.
+
+### 🇺🇸 US
+
+Standard US keyboard.
+
+### 🍎 Mac
+
+Mac keyboard layout.
+
+The layout system must be configuration-driven.
+
+```text
+Keyboard Engine
+      ↓
+Layout Configuration
+      ↓
+Visual Keyboard
+```
+
+Layouts must not be hardcoded directly into the core keyboard engine.
+
+This allows future layouts to be added without rewriting the system.
+
+---
+
+# 12. Keyboard Detection Engine
+
+The application must process:
+
+* `keydown`
+* `keyup`
+
+and maintain keyboard state.
+
+For every detected key, maintain:
+
+* Key name
+* `event.code`
+* `event.key`
+* Pressed state
+* Released state
+* Press count
+* Last press timestamp
+* Last release timestamp
+
+Where browser support permits, physical key information should be preferred over character-only information.
+
+---
+
+# 13. Supported Key Categories
+
+The engine must support:
+
+* Alphabetic keys
+* Number keys
+* Function keys
+* Escape
+* Tab
+* Caps Lock
+* Shift
+* Ctrl
+* Alt
+* Windows key
+* Command
+* Option
+* Space
+* Enter
+* Backspace
+* Delete
+* Insert
+* Home
+* End
+* Page Up
+* Page Down
+* Arrow keys
+* Print Screen
+* Scroll Lock
+* Pause
+* Numeric keypad
+* Brazilian-specific keys
+* Mac-specific modifier keys
+
+Browser and OS limitations should be documented where some keys cannot be reliably detected.
+
+---
+
+# 14. Visual Keyboard
+
+The keyboard should visually correspond to the selected layout.
+
+## Key states
+
+### Untested
+
+Neutral appearance.
+
+### Pressed
+
+Immediate animation/highlight.
+
+### Tested
+
+Indicates successful detection.
+
+### Problem
+
+Used when a diagnostic identifies a possible problem.
+
+### Ghosting
+
+Special visual state for keys involved in a possible ghosting condition.
+
+Color must never be the only indication of state.
+
+---
+
+# 15. Test Statistics
+
+Display live information such as:
+
+```text
+Teclas testadas: 42/104
+Pressionamentos: 87
+Máximo simultâneo: 6
+Última tecla: A
+```
+
+Statistics should update immediately.
+
+---
+
+# 16. Guided Full Keyboard Test
+
+Provide:
+
+**Começar teste completo**
+
+The system guides the user through individual keys.
+
+Example:
+
+```text
+1 / 104
+
+Pressione:
+ESC
+```
+
+After detection:
+
+```text
+✓ Detectada
+
+2 / 104
+
+Pressione:
+F1
+```
+
+The system continues until all relevant keys have been tested.
+
+---
+
+# 17. Problem Finder
+
+After testing, display a diagnostic summary.
+
+Example:
+
+```text
+Diagnóstico do teclado
+
+✓ Funcionando: 98
+⚠ Não testadas: 4
+⚠ Possíveis problemas: 2
+```
+
+Clicking a problem should reveal relevant information.
+
+The product must distinguish:
+
+* Confirmed browser event detection
+* Possible hardware problem
+* Possible rollover limitation
+* Possible browser/OS limitation
+
+The product should avoid claiming hardware failure when the browser cannot establish it definitively.
+
+---
+
+# 18. Ghosting Test
+
+Dedicated page:
+
+```text
+/teste-ghosting-teclado
+```
+
+Purpose:
+
+Test simultaneous key detection.
+
+Example:
+
+```text
+Pressionadas:
+
+W + A + S + D + Shift + Space
+
+Detectadas:
+
+6 / 6
+```
+
+If fewer keys are detected:
+
+```text
+5 / 6 detectadas
+
+Possível limitação de ghosting ou rollover.
+```
+
+The wording must remain technically cautious.
+
+---
+
+# 19. NKRO / Rollover Test
+
+Dedicated page:
+
+```text
+/teste-nkro
+```
+
+Display:
+
+* Current simultaneous keys
+* Maximum simultaneously detected keys
+* Test history during session
+
+Explain:
+
+* 2KRO
+* 6KRO
+* NKRO
+* Rollover
+
+The website must not claim a hardware specification solely from browser observations when that conclusion cannot be reliably established.
+
+---
+
+# 20. Key Chatter Test
+
+Dedicated page:
+
+```text
+/teste-chatter
+```
+
+Purpose:
+
+Detect possible repeated unintended key events.
+
+Example:
+
+User presses:
+
+```text
+A
+```
+
+Browser receives:
+
+```text
+A A
+```
+
+within a very short interval.
+
+Display:
+
+> Possível chatter detectado.
+
+Show:
+
+* Key
+* Number of unexpected repeats
+* Observed timing
+
+Do not state that hardware failure is definitively confirmed.
+
+---
+
+# 21. Response-Time Measurement
+
+Display browser-observed event timing.
+
+Example:
+
+```text
+Tempo observado:
+4,8 ms
+```
+
+Required explanation:
+
+> O tempo observado no navegador pode ser afetado pelo sistema operacional, navegador, hardware e agendamento de eventos. Essa medição não representa uma medição laboratorial da latência ou taxa de polling do teclado.
+
+Do not present browser event timing as an exact hardware polling-rate measurement.
+
+---
+
+# 22. Sound Mode
+
+Optional feature:
+
+**🔊 Sons das teclas**
+
+States:
+
+* ON
+* OFF
+
+Controls:
+
+* Enable/disable
+* Volume
+
+Default:
+
+OFF where appropriate.
+
+The site must respect browser autoplay/audio restrictions.
+
+Sounds should be subtle and optional.
+
+---
+
+# 23. Dark Mode
+
+Modes:
+
+* Light
+* Dark
+* System
+
+Save preference locally.
+
+Toggle:
+
+```text
+☀️ / 🌙
+```
+
+Dark mode must preserve:
+
+* Contrast
+* Key visibility
+* Focus indicators
+* Accessibility
+
+---
+
+# 24. Typing Speed Test
+
+Dedicated page:
+
+```text
+/teste-velocidade-digitacao
+```
+
+Modes:
+
+* 15 seconds
+* 30 seconds
+* 60 seconds
+* Custom
+
+Metrics:
+
+* WPM
+* PPM
+* Accuracy
+* Errors
+* Correct characters
+* Incorrect characters
+
+Brazilian production version should use natural Brazilian Portuguese text.
+
+---
+
+# 25. Windows Keyboard Page
+
+```text
+/teste-teclado-windows
+```
+
+Include:
+
+* Windows keyboard visualization
+* Windows key
+* Function keys
+* Ctrl/Alt/Shift
+* Numeric keypad
+* Common Windows keyboard troubleshooting
+* Relevant FAQ
+
+---
+
+# 26. Mac Keyboard Page
+
+```text
+/teste-teclado-mac
+```
+
+Include:
+
+* Command
+* Option
+* Control
+* Function/Globe
+* Arrow keys
+* Mac-specific layout
+* Mac troubleshooting
+* Relevant FAQ
+
+---
+
+# 27. ABNT2 Keyboard Page
+
+```text
+/teste-teclado-abnt2
+```
+
+Include:
+
+* ABNT2 visual layout
+* Ç
+* Brazilian-specific keys
+* Numeric keypad
+* Layout explanation
+* Troubleshooting
+* Relevant FAQ
+
+This page is a major Brazil-specific SEO target.
+
+---
+
+# 28. Future SEO Tool Pages
+
+Potential pages:
+
+```text
+/teste-teclado-notebook
+/teste-teclado-pc
+/teste-teclado-gamer
+/teste-teclado-mecanico
+/teste-teclado-bluetooth
+/teste-teclado-sem-fio
+/teste-teclado-60
+```
+
+Do not automatically create large numbers of near-identical pages.
+
+Every indexable page must provide distinct value and satisfy a distinct search intent.
+
+---
+
+# 29. Educational Content
+
+Potential content pages:
+
+```text
+/como-testar-teclado
+/teclado-nao-funciona
+/o-que-e-ghosting
+/o-que-e-nkro
+/como-saber-se-teclado-e-abnt2
+```
+
+Educational content should naturally link to the relevant interactive tool.
+
+---
+
+# 30. SEO Strategy
+
+SEO is a core product requirement.
+
+## Primary keyword themes
+
+Initial research targets:
+
+* teste teclado
+* teste teclado online
+* teste de teclado
+* testar teclado
+* teste teclado grátis
+* teste teclado ABNT2
+* teste teclado notebook
+* teste teclado PC
+* teste teclado gamer
+* teste teclado mecânico
+* teste teclado Mac
+* teste teclado Windows
+* teste ghosting teclado
+* teste NKRO
+* teste velocidade digitação
+
+Final keyword targets must be validated using current Brazilian search data before publishing.
+
+---
+
+# 31. Keyword-to-URL Mapping
+
+Before creating SEO pages, maintain a keyword map:
+
+```text
+Keyword
+↓
+Search Intent
+↓
+Target URL
+↓
+Primary Title
+↓
+H1
+↓
+Supporting Topics
+```
+
+Example:
+
+```text
+teste teclado ABNT2
+        ↓
+Transactional/tool intent
+        ↓
+/teste-teclado-abnt2
+        ↓
+Teste de Teclado ABNT2 Online
+```
+
+This prevents unnecessary keyword cannibalization.
+
+---
+
+# 32. Search Intent Classification
+
+Each indexable page must have a primary intent:
+
+* Tool
+* Troubleshooting
+* Informational
+
+A page should not exist solely because a keyword variation exists.
+
+---
+
+# 33. Topical Coverage
+
+Content should naturally cover relevant concepts including:
+
+* Teclas
+* Teclado
+* ABNT2
+* Windows
+* Mac
+* Notebook
+* PC
+* Teclado mecânico
+* Teclado gamer
+* Ghosting
+* NKRO
+* Rollover
+* Chatter
+* USB
+* Bluetooth
+* Digitação
+
+Avoid unnatural keyword repetition.
+
+---
+
+# 34. SEO Metadata
+
+Every indexable page must have unique:
+
+* `<title>`
+* Meta description
+* H1
+* Canonical
+* Open Graph title
+* Open Graph description
+* Social image
+
+Example:
+
+**Title**
+
+> Teste de Teclado Online | Teste Todas as Teclas Grátis
+
+**Description**
+
+> Teste seu teclado online gratuitamente. Verifique as teclas, teste ABNT2, ghosting e rollover e descubra possíveis problemas.
+
+---
+
+# 35. Structured Data
+
+Use structured data only when it accurately represents visible page content.
+
+Potential types:
+
+* WebSite
+* WebApplication
+* SoftwareApplication where appropriate
+* BreadcrumbList
+
+FAQ structured data should **not** be treated as a core SEO strategy or promised as a source of FAQ rich results.
+
+The visible FAQ remains important for users and content completeness.
+
+---
+
+# 36. FAQ Strategy
+
+FAQs should be researched rather than invented solely for keyword density.
+
+Research sources:
+
+* Google autocomplete
+* People Also Ask
+* Related searches
+* Search Console
+* Competitor FAQs
+* Brazilian search terminology
+
+Potential questions:
+
+### General
+
+**Como testar o teclado online?**
+
+**Como saber se uma tecla está funcionando?**
+
+**Como testar todas as teclas do teclado?**
+
+**Como testar o teclado do notebook?**
+
+**Como testar um teclado USB?**
+
+### ABNT2
+
+**Como testar um teclado ABNT2?**
+
+**Como saber se meu teclado é ABNT2?**
+
+### Ghosting
+
+**O que é ghosting no teclado?**
+
+**Como testar o ghosting do teclado?**
+
+**O que é NKRO?**
+
+### Mac
+
+**Como testar um teclado do Mac?**
+
+**Como testar as teclas Command e Option?**
+
+### Troubleshooting
+
+**Por que uma tecla do meu teclado não funciona?**
+
+**Como saber se meu teclado está com defeito?**
+
+Answers must be concise, useful and technically accurate.
+
+---
+
+# 37. Internal Linking
+
+Every relevant page should link to related tools.
+
+Example:
+
+```text
+Teste de Teclado
+       ↓
+Teste Ghosting
+       ↓
+Teste NKRO
+       ↓
+Teste de Digitação
+       ↓
+Teste Teclado Gamer
+       ↓
+Teste Teclado Mecânico
+```
+
+Related tools should appear naturally within the user journey.
+
+---
+
+# 38. Breadcrumbs
+
+Relevant pages should display breadcrumbs.
+
+Example:
+
+```text
+Início
+ >
+Testes
+ >
+Teste de Ghosting
+```
+
+Use BreadcrumbList structured data where appropriate.
+
+---
+
+# 39. URL Rules
+
+URLs must be:
+
+* Short
+* Descriptive
+* Lowercase
+* Hyphen-separated
+* Stable
+
+Preferred:
+
+```text
+/teste-teclado-abnt2
+```
+
+Avoid:
+
+```text
+/tools/keyboard/tester/page123
+```
+
+---
+
+# 40. Canonical URLs
+
+Each indexable page should have an appropriate canonical URL.
+
+Normally this should be self-referencing.
+
+Example:
+
+```text
+/teste-teclado-abnt2
+```
+
+Canonical:
+
+```text
+https://testetecladoonline.com/teste-teclado-abnt2
+```
+
+---
+
+# 41. Sitemap
+
+Generate an XML sitemap containing indexable pages.
+
+Example:
+
+```text
+/
+ /teste-teclado
+ /teste-teclado-windows
+ /teste-teclado-mac
+ /teste-teclado-abnt2
+ /teste-ghosting-teclado
+ /teste-nkro
+ /teste-velocidade-digitacao
+```
+
+Do not unnecessarily include non-indexable utility pages.
+
+---
+
+# 42. Robots.txt
+
+Configure `robots.txt` so legitimate search crawlers can access all intended indexable pages.
+
+Do not use robots.txt as a substitute for `noindex`.
+
+---
+
+# 43. Indexability Checklist
+
+Every SEO page must be checked for:
+
+* Crawlability
+* Indexability
+* Correct canonical
+* Sitemap inclusion
+* Internal links
+* Correct `lang`
+* Correct metadata
+* No accidental `noindex`
+* No accidental crawler blocking
+* Correct rendering
+
+Use Google Search Console URL Inspection during launch.
+
+---
+
+# 44. Internationalization
+
+Development phase:
+
+**English**
+
+Production target:
+
+**Brazilian Portuguese**
+
+Translation structure:
+
+```text
+/locales
+    /en
+    /pt-BR
+```
+
+Text must not be hardcoded throughout components.
+
+Example:
+
+```text
+en:
+Start Keyboard Test
+
+pt-BR:
+Começar teste
+```
+
+---
+
+# 45. Brazilian Localization
+
+The Portuguese version must be localized rather than mechanically translated.
+
+Localize:
+
+* Interface
+* FAQs
+* Metadata
+* Headings
+* Examples
+* Typing-test content
+* Keyboard terminology
+* ABNT2 terminology
+* Troubleshooting language
+* Search-intent targeting
+
+Use natural Brazilian Portuguese.
+
+---
+
+# 46. Language SEO
+
+If multiple language versions are publicly indexed:
+
+* Use correct `lang` attributes.
+* Use appropriate `hreflang`.
+* Create equivalent localized URLs where appropriate.
+* Avoid presenting machine-translated pages as separate high-value content.
+* Ensure each localized page provides a useful experience.
+
+---
+
+# 47. Technical Architecture
+
+Recommended stack:
+
+### Frontend
+
+**Next.js + React**
+
+### Language
+
+**TypeScript**
+
+### Styling
+
+**Tailwind CSS**
+
+### State
+
+React state or lightweight state management.
+
+### Backend
+
+No backend required for core keyboard functionality.
+
+A backend may be introduced later only for features that genuinely require server-side functionality.
+
+---
+
+# 48. Shared Component Architecture
+
+Reusable components:
+
+```text
+Header
+Footer
+KeyboardTester
+KeyboardLayout
+KeyboardKey
+OSSelector
+LayoutSelector
+TestStatistics
+ProgressIndicator
+DiagnosticResult
+GhostingTester
+RolloverTester
+TypingTester
+FAQSection
+RelatedTools
+ThemeToggle
+SoundToggle
+PrivacyNotice
+Breadcrumbs
+```
+
+---
+
+# 49. Keyboard Engine Architecture
+
+```text
+KeyboardEngine
+       │
+       ├── WindowsLayout
+       ├── MacLayout
+       ├── ABNT2Layout
+       └── USLayout
+```
+
+The engine should be independent from page-specific SEO content.
+
+---
+
+# 50. Browser Compatibility
+
+Target:
+
+* Chrome
+* Edge
+* Firefox
+* Safari
+* Android Chrome
+* iOS Safari
+
+Test particularly:
+
+* Modifier keys
+* Function keys
+* Mac keys
+* Brazilian layout
+* Audio
+* Local storage
+* Keyboard events
+* Mobile behavior
+
+Document browser limitations where necessary.
+
+---
+
+# 51. Accessibility
+
+Requirements:
+
+* Keyboard navigable controls
+* Visible focus states
+* ARIA labels where appropriate
+* Adequate contrast
+* Reduced-motion support
+* Screen-reader-friendly controls
+* Large enough interactive controls
+* Do not rely exclusively on color
+
+---
+
+# 52. Privacy
+
+The site must:
+
+* Require no account
+* Avoid storing typed content
+* Avoid transmitting keyboard input to servers
+* Avoid collecting passwords
+* Explain keyboard-event processing clearly
+* Provide a privacy page
+
+---
+
+# 53. Analytics
+
+Analytics should measure product usage without collecting actual keyboard input.
+
+Allowed events:
+
+```text
+keyboard_test_started
+keyboard_test_completed
+ghosting_test_started
+typing_test_started
+layout_changed
+os_changed
+dark_mode_enabled
+sound_enabled
+report_exported
+```
+
+Never send:
+
+* Actual key sequences
+* Typed text
+* Passwords
+* Personal keyboard input
+
+---
+
+# 54. Search Console
+
+Configure Google Search Console.
+
+Track:
+
+* Impressions
+* Clicks
+* CTR
+* Average position
+* Search queries
+* Landing pages
+* Indexing
+* Coverage
+* Core Web Vitals
+
+---
+
+# 55. SEO Feedback Loop
+
+The SEO process will be:
+
+```text
+Keyword Research
+       ↓
+SERP Analysis
+       ↓
+Build Tool/Page
+       ↓
+Publish
+       ↓
+Index
+       ↓
+Search Console
+       ↓
+Real Search Queries
+       ↓
+Identify Opportunities
+       ↓
+Improve Existing Pages
+       ↓
+Create Valuable New Pages
+       ↓
+Internal Linking
+       ↓
+Repeat
+```
+
+Search Console data should guide future expansion.
+
+---
+
+# 56. Competitor Analysis
+
+Primary references:
+
+## KeyboardTester.com
+
+Analyze:
+
+* Keyboard visualization
+* Windows support
+* Mac support
+* Testing flow
+* UX
+* Layout handling
+
+## TesteTeclado.com.br
+
+Analyze:
+
+* Brazilian terminology
+* ABNT2
+* Ghosting
+* Rollover
+* Diagnostic functionality
+* SEO structure
+
+## Other Brazilian keyboard-testing websites
+
+Analyze:
+
+* Typing speed
+* Chatter testing
+* Advanced diagnostics
+* Windows/Mac pages
+* Gaming keyboard pages
+* Export functionality
+* Polling/response testing
+
+The product may take inspiration from competitor functionality and information architecture but must not copy:
+
+* Source code
+* Text
+* Branding
+* Graphics
+* Unique assets
+* Copyrighted content
+
+---
+
+# 57. Competitive Feature Baseline
+
+Our planned feature set:
+
+| Feature                  | Requirement |
+| ------------------------ | ----------: |
+| Online keyboard testing  |           ✅ |
+| Windows support          |           ✅ |
+| Mac support              |           ✅ |
+| ABNT2                    |           ✅ |
+| US layout                |           ✅ |
+| Dark mode                |           ✅ |
+| Sound mode               |           ✅ |
+| Ghosting test            |           ✅ |
+| Rollover/NKRO            |           ✅ |
+| Typing speed             |           ✅ |
+| Chatter detection        |           ✅ |
+| Response timing          |           ✅ |
+| Key counters             |           ✅ |
+| Full keyboard diagnostic |           ✅ |
+| Guided full test         |           ✅ |
+| Problem finder           |           ✅ |
+| Export                   |           ✅ |
+| Progress tracking        |           ✅ |
+| Mobile responsive        |           ✅ |
+| Privacy-first processing |           ✅ |
+| SEO landing pages        |           ✅ |
+| FAQ                      |           ✅ |
+| Related tools            |           ✅ |
+
+---
+
+# 58. Launch Strategy
+
+Do not launch dozens of thin pages.
+
+## Phase 1: Build
+
+Develop:
+
+```text
+/
+```
+
+with the complete keyboard engine.
+
+Test:
+
+* Windows
+* Mac
+* ABNT2
+* Dark mode
+* Sound
+* Key detection
+* Full test
+* Ghosting
+* Rollover
+* Diagnostics
+
+## Phase 2: Core SEO Pages
+
+Launch:
+
+```text
+/teste-teclado-windows
+/teste-teclado-mac
+/teste-teclado-abnt2
+/teste-ghosting-teclado
+```
+
+## Phase 3: Additional Tools
+
+Launch:
+
+```text
+/teste-nkro
+/teste-velocidade-digitacao
+/teste-chatter
+```
+
+## Phase 4: Search-driven expansion
+
+Use real Brazilian search data to determine:
+
+* New pages
+* New tools
+* FAQs
+* Content
+* Internal links
+* UX improvements
+
+---
+
+# 59. Development Language Strategy
+
+## Phase 1
+
+Build the complete product in English.
+
+Goals:
+
+* Easier development
+* Easier debugging
+* Test complete functionality
+* Establish component architecture
+* Validate UX
+
+## Phase 2
+
+Translate/localize the complete website into Brazilian Portuguese.
+
+## Phase 3
+
+Perform Brazilian SEO research and optimize the localized version around actual Brazilian search behavior.
+
+---
+
+# 60. Quality Assurance
+
+Before launch, test:
+
+### Functional
+
+* Every major key
+* Modifier combinations
+* Function keys
+* Numeric keypad
+* ABNT2
+* Windows
+* Mac
+* Ghosting
+* NKRO
+* Chatter
+* Typing speed
+* Sound
+* Dark mode
+* Export
+
+### UX
+
+* Desktop
+* Laptop
+* Tablet
+* Mobile
+* Keyboard-only navigation
+* Touch navigation
+
+### Technical
+
+* JavaScript errors
+* Broken links
+* Metadata
+* Canonicals
+* Sitemap
+* Robots
+* Structured data
+* Responsive layout
+* Performance
+
+### SEO
+
+* Search engine crawlability
+* Indexability
+* Internal linking
+* Unique titles
+* Unique descriptions
+* H1 structure
+* Breadcrumbs
+* `hreflang` where applicable
+* Search Console verification
+
+---
+
+# 61. Performance Requirements
+
+Target:
+
+* Fast first render
+* Minimal layout shift
+* Optimized fonts
+* Optimized images
+* Minimal blocking JavaScript
+* Lazy loading of non-critical content
+* Efficient keyboard event processing
+
+The interactive tester must remain responsive even while processing multiple simultaneous key events.
+
+---
+
+# 62. Monetization
+
+Potential future monetization:
+
+### Primary
+
+Display advertising once meaningful traffic exists.
+
+### Potential secondary
+
+* Relevant affiliate products
+* Keyboard accessories
+* Sponsored placements where appropriate
+
+Advertising must not interfere with the primary keyboard-testing experience.
+
+Avoid intrusive ads inside the keyboard interface.
+
+---
+
+# 63. Product Success Metrics
+
+## Product
+
+Track:
+
+* Test starts
+* Test completions
+* Ghosting tests
+* Typing tests
+* Average session engagement
+* Repeat usage
+* Export usage
+
+## SEO
+
+Track:
+
+* Indexed pages
+* Impressions
+* Clicks
+* CTR
+* Average positions
+* Number of ranking queries
+* Organic landing-page traffic
+
+## Performance
+
+Track:
+
+* Core Web Vitals
+* JavaScript errors
+* Page load performance
+* Interaction responsiveness
+
+---
+
+# 64. Future Expansion
+
+Possible future tools:
+
+* Mouse Tester
+* Gamepad Tester
+* Controller Tester
+* Click Speed Test
+* CPS Test
+* Spacebar Counter
+* WASD Tester
+* Typing Test variations
+
+These should remain separate from the initial keyboard product until the keyboard platform is validated.
+
+---
+
+# 65. Final Product Architecture
+
+```text
+                       TesteTecladoOnline.com
+                                  │
+              ┌───────────────────┴───────────────────┐
+              │                                       │
+          INTERACTIVE                              CONTENT
+             TOOLS                                  & SEO
+              │                                       │
+       ┌──────┼─────────┐                    ┌────────┼────────┐
+       │      │         │                    │        │        │
+    Keyboard Ghosting Typing              Guides     FAQ  Troubleshooting
+       │      │         │
+       │      │         ├── WPM
+       │      │         └── Accuracy
+       │      ├── NKRO
+       │      └── Rollover
+       │
+       ├── Windows
+       ├── Mac
+       ├── ABNT2
+       ├── Notebook
+       └── Gamer
+
+                         ↓
+
+                 Shared TypeScript Engine
+                         ↓
+                 Shared UI Components
+                         ↓
+                 SEO + Internal Linking
+                         ↓
+                Brazilian Localization
+                         ↓
+                  Google Search Console
+                         ↓
+                  Data-driven Expansion
+```
+
+---
+
+# 66. Final Product Definition
+
+**TesteTecladoOnline.com is a multi-page Brazilian keyboard diagnostic platform powered by one reusable keyboard engine.**
+
+The homepage focuses on the primary keyboard test.
+
+Dedicated pages target specific user needs and search intents.
+
+The product will initially be developed in English, fully tested, then localized into Brazilian Portuguese.
+
+The Brazil version will prioritize:
+
+**Portuguese language + ABNT2 + Brazilian search terminology + strong technical SEO + excellent UX.**
+
+The website will not depend on hundreds of keyword pages.
+
+Instead:
+
+> **Build an excellent tool → publish useful pages → collect real search data → understand what users need → build the next useful tool.**
+
+That principle governs the entire product roadmap.
